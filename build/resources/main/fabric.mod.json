@@ -1,0 +1,29 @@
+{
+    "schemaVersion": 1,
+    "id": "pokecraft",
+    "version": "1.0.0",
+    "name": "pokecraft",
+    "description": "Un mod Minecraft 1.20.4 fait maison",
+    "authors": [
+      "Konatsu"
+    ],
+    "contact": {
+      "sources": "https://github.com/nmarrocchi/pokecraft.git"
+    },
+  
+    "license": "MIT",
+    "icon": "assets/pokecraft/icon.png",
+    "environment": "*",
+    "entrypoints": {
+      "main": [
+        "com.Konatsu.pokecraft.pokecraft"
+      ]
+    },
+    "depends": {
+      "fabricloader": ">=0.16.9",
+      "minecraft": "1.20.4",
+      "java": ">=17",
+      "fabric": ">=0.92.3"
+    }
+  }
+  
