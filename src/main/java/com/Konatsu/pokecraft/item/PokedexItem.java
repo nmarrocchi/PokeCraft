@@ -2,6 +2,9 @@ package com.Konatsu.pokecraft.item;
 
 import org.jetbrains.annotations.Nullable;
 
+import com.Konatsu.pokecraft.screen.PokedexScreen;
+
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -20,8 +23,10 @@ public class PokedexItem extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
-        if (!world.isClient) {
-            player.sendMessage(net.minecraft.text.Text.of("Le Pokédex s'ouvre !"), false); // utilisation du pokedex
+        if (world.isClient) {
+            MinecraftClient.getInstance().execute(() -> {
+                MinecraftClient.getInstance().setScreen(new PokedexScreen());
+            });
         }
 
         return TypedActionResult.success(player.getStackInHand(hand));

@@ -17,6 +17,9 @@
     "entrypoints": {
       "main": [
         "com.Konatsu.pokecraft.pokecraft"
+      ],
+      "client": [
+        "com.Konatsu.pokecraft.pokecraftClient"
       ]
     },
     "depends": {
